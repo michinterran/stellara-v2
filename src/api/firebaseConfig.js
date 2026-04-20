@@ -1,11 +1,8 @@
-// src/api/firebaseConfig.js
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
 
 const firebaseConfig = {
-  // 방금 화면에서 복사한 긴 코드(apiKey 등)를 여기에 넣으십시오
-  apiKey: "지휘관님 화면의 apiKey를 넣으세요",
+  apiKey: "AIzaSyAYKL1ur0AnvZfTLN7-xt0yzmuoo4HUTfk",
   authDomain: "stellara-v2.firebaseapp.com",
   projectId: "stellara-v2",
   storageBucket: "stellara-v2.firebasestorage.app",
@@ -16,4 +13,3 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
-export const db = getFirestore(app);

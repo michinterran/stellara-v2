@@ -1,10 +1,17 @@
 // main.js
-import { login, handleRedirect } from "./src/api/authService.js";
+import { login, handlerRedirect } from "./src/api/authService.js";
 
 document.addEventListener('DOMContentLoaded', () => {
-    handleRedirect().then(user => {
-        if (user) console.log("로그인 성공");
+    // 1. 로그인 결과 확인
+    handlerRedirect().then((result) => {
+        if (result) {
+            console.log("로그인 성공!", result.user);
+        }
     });
-    
-    document.getElementById('login-btn')?.addEventListener('click', login);
+
+    // 2. 버튼 클릭 시 로그인 실행
+    const loginBtn = document.getElementById('login-btn');
+    if (loginBtn) {
+        loginBtn.addEventListener('click', login);
+    }
 });
