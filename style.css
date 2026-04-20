@@ -1,0 +1,13 @@
+body {
+    background: #010006;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#login-btn {
+    padding: 15px 30px;
+    cursor: pointer;
+}
